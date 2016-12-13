@@ -1,0 +1,49 @@
+#ifndef __AMBA__HARDWARE_H__
+#define __AMBA__HARDWARE_H__
+
+#define BLD_LOAD_ADDR	0x00000000
+
+#define DDRC_BASE		0xDFFE0000
+#define	DDRC_SIZE		0x00010000
+
+#define APB_BASE		0xE8000000
+#define	APB_SIZE		0x01000000
+
+#define AHB_BASE		0xE0000000
+#define AHB_SIZE		0x10000000
+
+#define AXI_BASE		0xF0000000
+#define AXI_SIZE		0x0030000
+
+#define UART0_OFFSET	0x5000
+#define	UART0_BASE		(APB_BASE + UART0_OFFSET)
+
+#define IOMUX_OFFSET	0x16000
+#define IOMUX_BASE		(APB_BASE + IOMUX_OFFSET)
+
+#define RCT_BASE		(0xec170000)
+
+#define UART_RBR	0x00
+#define UART_THR	0x00
+#define UART_DLL	0x00
+#define UART_IER	0x04
+#define UART_DLH	0x04
+#define UART_IIR	0x08
+#define UART_FCR	0x08
+#define UART_LCR	0x0C
+#define UART_MCR	0x10
+#define UART_LSR	0x14
+#define UART_MSR	0x18
+#define UART_SCR	0x1C
+#define UART_DMAE   0x28
+#define UART_USR	0x7C
+#define UART_RFL	0x84
+#define UART_SRR	0x84
+
+#define CORTEX_RESET_OFFSET			0x10028
+#define CORTEX_RESET_REG			(AXI_BASE + CORTEX_RESET_OFFSET)
+
+#define	SOFT_OR_DLL_RESET_OFFSET	0x68
+#define SOFT_OR_DLL_RESET_REG		(RCT_BASE + SOFT_OR_DLL_RESET_OFFSET)
+
+#endif
